@@ -1,0 +1,61 @@
+---
+title: "How Do Annual Members And Casual Riders Use Cyclistic Bikes Differently"
+author: "Omolewa Adetoro"
+date: "2024-08-17"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+In this report we will look at the differences between in how annual members and casual riders use Cyclistic Bike. The data we will use was collected between the 1st September 2023 and 31st July 2024.
+
+## Setting up my environment
+
+Notes: setting up my R environment by loading the " tidyverse", "scales" and "bike_data_clean" csv file.
+
+```{r loading the package and csv file, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(scales)
+bike_data_clean = read.csv("~/Data Analysis Case Studies/Case Study 1 - How Does A Bike-Share Navigate Speedy Success/bike_data_clean.csv")
+```
+
+## Visualisation
+
+Here we will look through a series of visualisations.
+
+### Most common user type
+
+Here, we plot a chart to determine what type of riders used the service the most.
+
+```{r visualise the most common user type, message=FALSE, warning=FALSE}
+ggplot(data = bike_data_clean) +
+  geom_bar(mapping = aes(x = member_type, fill = member_type)) +
+  labs(title = "The Most Common User Type") +
+  geom_text(aes(x = member_type, label = after_stat(count)), stat = 'count', vjust = -0.5) +
+  scale_y_continuous(labels = label_number())
+```
+
+### The type of bikes used by members and casual riders
+
+Here, we will plot a chart to compare the types of bike used by annual members and casual riders.
+
+```{r bike types, message=FALSE, warning=FALSE}
+ggplot(data = bike_data_clean) +
+  geom_bar(mapping = aes(x = rideable_type, fill = member_type)) +
+  facet_wrap(~ member_type) +
+  labs(title = "The Type Of Bikes Used By Annual Members And Casual Riders") +
+  geom_text(aes(x = rideable_type, label = after_stat(count)), stat = 'count', vjust = -0.5) 
+```
+
+### Total rides for each week days by members and casual riders
+
+Here, we will plot a chart to compare the total amount of rides taken for each weekday by annual members and casual riders.
+
+```{r total rides for each weekday, message=FALSE, warning=FALSE}
+ggplot(data = bike_data_clean) +
+  geom_bar(mapping = aes(x = weekday, fill = member_type)) +
+  facet_wrap(~ member_type) +
+  labs(title = "The Total Rides For Each Day Of The Week") +
+  theme(axis.text.x = element_text(angle = 45)) +
+  scale_y_continuous(labels = label_number()) 
+```
