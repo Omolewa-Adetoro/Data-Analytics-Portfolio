@@ -16,12 +16,14 @@ Welcome to my Data Analysis Portfolio! This repository showcases a collection of
 My goal with this portfolio is to demonstrate my ability to turn raw data into actionable insights through a structures and thouughtful approach.
 
 # Projects
-
+## 1. Differences Between Members And Casual Riders
+ **Description:** This project explored the differences between annual members and casual riders that use a Cyclistic Bikes (a fictional company).
+ **Tools:** SQL, R, tidyverse,scales
 
 # Technologies & Tools
 Here are the technologies and tools I am proficient in, which are used throughout the projects:
 * Languages: Python, R,SQL
-* Data Manipulations: Pandas, Tidyverse,SQL
+* Data Manipulations: Pandas, Tidyverse, scales, SQL
 * Data Visualisation: ggplot2,Tableau
 * Other Tools: PGAdmin, RStudios, Juypter Notebook
 
