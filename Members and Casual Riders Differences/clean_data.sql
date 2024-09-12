@@ -410,4 +410,4 @@ UPDATE bike_data_clean
 SET "month" = 'December'
 WHERE "month" = '12';
 
-Download the table as a csv file
+-- Download the table as a csv file
