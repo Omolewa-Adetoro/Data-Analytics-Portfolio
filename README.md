@@ -17,9 +17,13 @@ My goal with this portfolio is to demonstrate my ability to turn raw data into a
 
 # Projects
 ## 1. Differences Between Members And Casual Riders
- **Description:** This project explored the differences between annual members and casual riders that use a Cyclistic Bikes (a fictional company).
+ **Description:**  
+ This project explored the differences between annual members and casual riders that use a Cyclistic Bikes (a fictional company).  
 
- **Tools:** SQL, R, tidyverse,scales
+ **Tools:**  
+ SQL, R, tidyverse,scales
+
+ **Link To Project:**  
 
 # Technologies & Tools
 Here are the technologies and tools I am proficient in, which are used throughout the projects:
