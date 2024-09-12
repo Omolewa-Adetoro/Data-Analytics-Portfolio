@@ -23,7 +23,7 @@ My goal with this portfolio is to demonstrate my ability to turn raw data into a
  **Tools:**  
  SQL, R, tidyverse,scales
 
- **Link To Project:**  
+ **Link To Project:**  https://github.com/Omolewa-Adetoro/Data-Analytics-Portfolio/tree/main/Members%20and%20Casual%20Riders%20Differences
 
 # Technologies & Tools
 Here are the technologies and tools I am proficient in, which are used throughout the projects:
