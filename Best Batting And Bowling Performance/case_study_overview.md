@@ -7,3 +7,7 @@
 * **Link:** https://www.kaggle.com/datasets/shreyasnaphad/cricket-score-predictor
 
 # Process
+* Use SQL to create a table for the dataset
+* Import the data
+* Delete the duplicate rows
+* Analyse the data
