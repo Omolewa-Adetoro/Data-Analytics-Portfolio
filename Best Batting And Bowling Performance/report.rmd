@@ -1,0 +1,194 @@
+---
+title: "Best Batting Performance"
+author: "Omolewa Adetoro"
+date: "2024-09-20"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+In this report we will look at which team had the best batting performance using the [T20 International Cricket Matches dataset](https://www.kaggle.com/datasets/shreyasnaphad/cricket-score-predictor) which I cleaned.
+
+## **The teams included in this dataset**
+
+-   Afghanistan
+-   Australia
+-   Bangladesh
+-   England
+-   India
+-   New Zealand
+-   Pakistan
+-   South Africa
+-   Sri Lanka
+-   West Indies
+
+## **Setting up my environment**
+
+Notes: setting up my R environment by loading "tidyverse" and "scales" packages as well as"cricket_data" the clean csv file
+
+```{r setting up my environment, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(scales)
+cricket_data = read.csv("~/Data Analysis Case Studies/Best Batting And Bowling Performance/clean cricket data.csv")
+```
+
+## **Findings**
+
+Here we will look at a series of visualisations and analysis to find which teams has the best batting performance.
+
+### **The number of games each team played**
+
+```{r the number of games played, echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = cricket_data %>%
+         distinct(batting_team,bowling_team,city)) +
+  geom_bar(mapping =aes(x = batting_team, fill = batting_team)) +
+  labs(title = "The Number Of Games For Each Team", x = "Batting Teams", y = "Number Of Games", fill = "Batting Teams") +
+  theme(axis.text.x = element_text(angle = 45)) +
+  scale_y_continuous(labels = label_number()) +
+  geom_text(aes(x = batting_team, label = after_stat(count)), stat = 'count', vjust = -0.5) 
+```
+
+There are a total of 347 matches, and each team played various amount of games. Due to this we will be using averages to ensure the reliability of the report.
+
+### **The average final score of each team**
+
+```{r average score, echo=FALSE, message=FALSE, warning=FALSE}
+avg_runs_data = cricket_data %>%
+  group_by(batting_team) %>%
+  summarise(avg_final_score = mean(runs_x))
+
+ggplot(data = avg_runs_data) +
+  geom_col(mapping = aes(x = batting_team, y = avg_final_score, fill = batting_team)) +
+  labs(title = "Average Final Score For Each Team", x = "Batting Teams", y = "Average Final Score", fill = "Batting Teams") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = scales::label_number()) +
+  geom_text(aes(x = batting_team, y = avg_final_score, label = round(avg_final_score, 1)), vjust = -0.5)
+```
+
+Here, we see the average scores for each team, with Australia achieving the highest and Afghanistan the lowest. However, since we are focusing on the team with the best batting performance, looking at the overall averages alone is insufficient. To get a more meaningful insight, the following visualizations and analysis will focus on scenarios where teams are performing at their peak.
+
+The conditions I used to define a team's best batting performance are:
+
+-   The top-order batsmen are batting
+
+-   The lower-order of batsmen are not involved
+
+-   The team is not under pressure, measured by maintaining a run rate of 7 or higher
+
+-   A powerplay has occurred
+
+-   The team shows aggression by scoring 45 or more runs in the last 5 overs.
+
+-   The tail-enders (e,g bowlers) are not involved in batting
+
+### **The average of final score when the teams are playing at their best**
+
+```{r average score at their best, echo=FALSE, message=FALSE, warning=FALSE}
+avg_best_perform = cricket_data %>% 
+  group_by(batting_team) %>% 
+  filter(top_order == 1, 
+         pressure == 0, 
+         pp == 1, 
+         aggression_mode == 1, 
+         tail == 0) %>% 
+  summarise(avg_final_score = mean(runs_x))
+
+ggplot(data = avg_best_perform) +
+  geom_col(mapping = aes(x = batting_team, y = avg_final_score, fill = batting_team)) +
+  labs(title = "The Average Final Score When The Team Is At Its Best", x = "Batting Teams", y = "Average Final Score", fill = "Batting Teams") +
+  theme(axis.text.x = element_text(angle =45, hjust = 1)) +
+  scale_y_continuous(labels = scales:: label_number()) +
+  geom_text(aes(x = batting_team, y = avg_final_score, label = round(avg_final_score, 1)), vjust = -0.5)
+```
+
+Here, we see the average scores for each team, with Australia achieving the highest and Afghanistan the lowest.
+
+### **The average number of wickets left**
+
+Having wickets left is beneficial for the batting team as it creates more scoring opportunities and boosts their confidence. It also adds psychological pressure on the bowling team, knowing they need to work harder to take the remaining wickets.
+
+```{r average wickets left, echo=FALSE, warning=FALSE}
+wickets = cricket_data %>% 
+  group_by(batting_team) %>% 
+  filter(top_order == 1, 
+         pressure == 0, 
+         pp == 1, 
+         aggression_mode == 1, 
+         tail == 0) %>% 
+  summarise(avg_wickets_left= mean(wickets_left))
+
+
+ggplot(data = wickets) +
+  geom_col(mapping = aes(x = batting_team, y = avg_wickets_left, fill = batting_team)) +
+  labs(title = "The Average Number Of Wickets Left", x = "Batting Teams", y = "Number Of Wickets", fill = "Batting Team") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = scales :: label_number()) +
+  geom_text(aes(x = batting_team, y = avg_wickets_left, label = round(avg_wickets_left, 1)), vjust = -0.5)
+```
+
+In this case, we can see that each team averaged at least 9 wickets remaining by the end of the first innings.
+
+### **The average score of the last five overs**
+
+The batting team typically scores the most runs during the final five overs, making this phase crucial in determining the outcome of the game.
+
+```{r average last five score, echo=FALSE, message=FALSE, warning=FALSE}
+last_five = cricket_data %>% 
+  group_by(batting_team) %>% 
+  filter(top_order == 1, 
+         pressure == 0, 
+         pp == 1, 
+         aggression_mode == 1, 
+         tail == 0) %>% 
+  summarise(avg_last_five= mean(last_five))
+
+
+ggplot(data = last_five) +
+  geom_col(mapping = aes(x = batting_team, y = avg_last_five, fill = batting_team)) +
+  labs(title = "The Average Last Five Scores", x = "Batting Teams", y = "Last Five Score", fill = "Batting Team") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = scales :: label_number()) +
+  geom_text(aes(x = batting_team, y = avg_last_five, label = round(avg_last_five, 1)), vjust = -0.5)
+```
+
+As shown here, the West Indies have achieved the highest average score during this key period.
+
+## **Conclusion**
+
+To identify the team with the best batting performance, I ranked them in three categories:
+
+-   Average score
+
+-   Average wickets left
+
+-   Average runs in the last five overs
+
+Each team received a score ranging from 1 to 10, with 10 points awarded for the highest rank and 1 point for the lowest. The scores from all categories were then totaled to determine the final ranking.
+
+### **Final ranking of the best batting performance**
+
+```{r final ranking, echo=FALSE, message=FALSE, warning=FALSE}
+teams = c("Afghanistan", "Pakistan", "Sri Lanka", "Bangladesh", "England", "West Indies", "India", "Australia", "New Zealand", "South Africa" )
+total_point = c(8,11,16,18,20,23,24,24,25,26)
+ranking = data.frame(teams,total_point)
+
+ggplot(data = ranking) +
+  geom_col(mapping = aes(x = teams, y = total_point, fill = teams)) +
+  labs(title = "Best Batting Performance", x = "Teams", fill = "Teams", y = "Points") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = scales :: label_number()) +
+  scale_x_discrete(limits = teams) +
+  geom_text(aes(x = teams, y = total_point, label = round(total_point, 1)), vjust = -0.5)
+```
+
+### **Best Batting Performance**
+
+1.  South Africa
+2.  New Zealand
+3.  India & Australia
+4.  West Indies
+5.  England
+6.  Bangladesh
+7.  Sri Lanka
+8.  Pakistan
+9.  Afghanistan
