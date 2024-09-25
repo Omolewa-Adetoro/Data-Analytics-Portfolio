@@ -11,3 +11,4 @@
 * Import the data
 * Delete the duplicate rows
 * Analyse the data
+* Create a report in R
