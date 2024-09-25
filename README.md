@@ -30,9 +30,9 @@ My goal with this portfolio is to demonstrate my ability to turn raw data into a
  This projects analysed world cricket data to find which countries has the best batting and bowling performance.
 
   **Tools:**  
- 
+ SQL, R, tidyverse,scales
 
- **Link To Project:** 
+ **Link To Project:** https://github.com/Omolewa-Adetoro/Data-Analytics-Portfolio/tree/main/Best%20Batting%20And%20Bowling%20Performance 
 
 # Technologies & Tools
 Here are the technologies and tools I am proficient in, which are used throughout the projects:
