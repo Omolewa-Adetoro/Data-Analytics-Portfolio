@@ -34,6 +34,15 @@ My goal with this portfolio is to demonstrate my ability to turn raw data into a
 
  **Link To Project:** https://github.com/Omolewa-Adetoro/Data-Analytics-Portfolio/tree/main/Best%20Batting%20And%20Bowling%20Performance 
 
+   ## 3. Sales Insight
+ **Description**
+ This projects uses data to create a dashboard to provide sales insight in real time.
+
+  **Tools:**  
+ 
+
+ **Link To Project:** 
+
 # Technologies & Tools
 Here are the technologies and tools I am proficient in, which are used throughout the projects:
 * Languages: Python, R,SQL
