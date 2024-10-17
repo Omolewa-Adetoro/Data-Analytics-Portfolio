@@ -1,0 +1,196 @@
+---
+title: "Best Bowling Performance"
+author: "Omolewa Adetoro"
+date: "2024-10-07"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+In this report we will look at which team had the best bowling performance using the [T20 International Cricket Matches dataset](https://www.kaggle.com/datasets/shreyasnaphad/cricket-score-predictor) which I cleaned.
+
+## **The teams included in this dataset**
+
+-   Afghanistan
+-   Australia
+-   Bangladesh
+-   England
+-   India
+-   New Zealand
+-   Pakistan
+-   South Africa
+-   Sri Lanka
+-   West Indies
+
+## **Setting up my environment**
+
+Notes: setting up my R environment by loading "tidyverse" and "scales" packages as well as"cricket_data" the clean csv file
+
+```{r setting up my environment, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(scales)
+cricket_data = read.csv("~/Data Analysis Case Studies/Best Batting And Bowling Performance/clean cricket data.csv")
+```
+
+## **Findings**
+
+In this section, we will explore a series of visualizations and analyses to determine which teams have the best bowling performance. Our focus will be on how effectively they defended against opposing batting teams. To assess this, we will examine the lowest scores, as they reflect how well the bowling team disrupted the batting side’s performance, thereby enhancing their own.
+
+### **The number of games each team played**
+
+```{r the number of games played, echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = cricket_data %>%
+         distinct(batting_team,bowling_team,city)) +
+  geom_bar(mapping =aes(x = bowling_team, fill = bowling_team)) +
+  labs(title = "The Number Of Games For Each Team", x = "Bowling Team", y = "Number Of Games", fill = "Bowling Teams") +
+  theme(axis.text.x = element_text(angle = 45)) +
+  scale_y_continuous(labels = label_number()) +
+  geom_text(aes(x = bowling_team, label = after_stat(count)), stat = 'count', vjust = -0.5) 
+```
+
+There are a total of 347 matches, and each team played various amount of games. Due to this we will be using averages to ensure the reliability of the report.
+
+### **The average final score of each team**
+
+```{r average score, echo=FALSE, message=FALSE, warning=FALSE}
+avg_runs_data = cricket_data %>%
+  group_by(bowling_team) %>%
+  summarise(avg_final_score = mean(runs_x))
+
+ggplot(data = avg_runs_data) +
+  geom_col(mapping = aes(x = bowling_team, y = avg_final_score, fill = bowling_team)) +
+  labs(title = "Average Final Score For Each Team", x = "Bowling Teams", y = "Average Final Score", fill = "Bowling Teams") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = scales::label_number()) +
+  geom_text(aes(x = bowling_team, y = avg_final_score, label = round(avg_final_score, 1)), vjust = -0.5)
+```
+
+The average scores for each team are displayed here, with Pakistan having the lowest and West Indies the highest. Since we're evaluating the performance of the bowling teams, a lower score indicates stronger defense against the batting team. However, simply considering overall averages doesn't provide enough insight into which team has the best bowling performance. To gain a clearer perspective, the following visualizations and analysis will focus on scenarios where the batting teams delivered their best performances against the bowling team.
+
+The conditions I used to define a team's best batting performance are:
+
+-   The top-order batsmen are batting
+
+-   The lower-order of batsmen are not involved
+
+-   The team is not under pressure, measured by maintaining a run rate of 7 or higher
+
+-   A powerplay has occurred
+
+-   The team shows aggression by scoring 45 or more runs in the last 5 overs.
+
+-   The tail-enders (e,g bowlers) are not involved in batting
+
+By doing this we will he able to see how well the bowling team perform when their opposing team shows great promise.
+
+### **The average of final score when the teams are playing at their best**
+
+```{r average score at their best, echo=FALSE, message=FALSE, warning=FALSE}
+avg_best_perform = cricket_data %>% 
+  group_by(bowling_team) %>% 
+  filter(top_order == 1, 
+         pressure == 0, 
+         pp == 1, 
+         aggression_mode == 1, 
+         tail == 0) %>% 
+  summarise(avg_final_score = mean(runs_x))
+
+ggplot(data = avg_best_perform) +
+  geom_col(mapping = aes(x = bowling_team, y = avg_final_score, fill = bowling_team)) +
+  labs(title = "The Average Final Score When The Team Is At Its Best", x = "Bowling Teams", y = "Average Final Score", fill = "Bowling Teams") +
+  theme(axis.text.x = element_text(angle =45, hjust = 1)) +
+  scale_y_continuous(labels = scales:: label_number()) +
+  geom_text(aes(x = bowling_team, y = avg_final_score, label = round(avg_final_score, 1)), vjust = -0.5)
+```
+
+Here, we see the average scores for each team, with Afghanistan achieving the lowest and England the highest.
+
+### **The average number of wickets left**
+
+Retaining wickets is advantageous for the batting team, as it increases scoring opportunities and boosts their confidence. It also puts psychological pressure on the bowling team, knowing they must work harder to take the remaining wickets. Conversely, having fewer wickets left at the end of the game highlights the skill of the bowling team, as it demonstrates their ability to consistently dismiss the opposition.
+
+```{r average wickets left, echo=FALSE, warning=FALSE}
+wickets = cricket_data %>% 
+  group_by(bowling_team) %>% 
+  filter(top_order == 1, 
+         pressure == 0, 
+         pp == 1, 
+         aggression_mode == 1, 
+         tail == 0) %>% 
+  summarise(avg_wickets_left= mean(wickets_left))
+
+
+ggplot(data = wickets) +
+  geom_col(mapping = aes(x = bowling_team, y = avg_wickets_left, fill = bowling_team)) +
+  labs(title = "The Average Number Of Wickets Left", x = "Bowling Teams", y = "Number Of Wickets", fill = "Bowling Team") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = scales :: label_number()) +
+  geom_text(aes(x = bowling_team, y = avg_wickets_left, label = round(avg_wickets_left, 1)), vjust = -0.5)
+```
+
+In this case, we can see that each team averaged at least 9 wickets remaining by the end of the first innings.
+
+### **The average score of the last five overs**
+
+The batting team typically scores the most runs during the final five overs, making this phase crucial in determining the outcome of the game.
+
+```{r average last five score, echo=FALSE, message=FALSE, warning=FALSE}
+last_five = cricket_data %>% 
+  group_by(bowling_team) %>% 
+  filter(top_order == 1, 
+         pressure == 0, 
+         pp == 1, 
+         aggression_mode == 1, 
+         tail == 0) %>% 
+  summarise(avg_last_five= mean(last_five))
+
+
+ggplot(data = last_five) +
+  geom_col(mapping = aes(x = bowling_team, y = avg_last_five, fill = bowling_team)) +
+  labs(title = "The Average Last Five Scores", x = "Bowling Teams", y = "Last Five Score", fill = "Bowling Team") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = scales :: label_number()) +
+  geom_text(aes(x = bowling_team, y = avg_last_five, label = round(avg_last_five, 1)), vjust = -0.5)
+```
+
+As shown here, the Pakistan have achieved the lowest average score during this key period.
+
+## **Conclusion**
+
+To identify the team with the best batting performance, I ranked them in three categories:
+
+-   Average score
+
+-   Average wickets left
+
+-   Average runs in the last five overs
+
+Each team received a score ranging from 1 to 10, with 10 points awarded for the lowest rank and 1 point for the highest. The scores from all categories were then totaled to determine the final ranking.
+
+### **Final ranking of the best batting performance**
+
+```{r final ranking, echo=FALSE, message=FALSE, warning=FALSE}
+teams = c("England", "Bangladesh", "West Indies", "Sri Lanka", "India", "New Zealand", "South Africa", " Australia", "Afghanistan", "Pakistan")
+total_point = c(11,18,18,19,21,23,29,31,34,35)
+ranking = data.frame(teams,total_point)
+
+ggplot(data = ranking) +
+  geom_col(mapping = aes(x = teams, y = total_point, fill = teams)) +
+  labs(title = "Best Bowling Performance", x = "Teams", fill = "Teams", y = "Points") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = scales :: label_number()) +
+  scale_x_discrete(limits = teams) +
+  geom_text(aes(x = teams, y = total_point, label = round(total_point, 1)), vjust = -0.5)
+```
+
+### **Best Bowling Performance**
+
+1.  Pakistan
+2.  Afghanistan
+3.  Australia
+4.  South Africa
+5.  New Zealand
+6.  India
+7.  Sri Lanka
+8.  West Indies & Bangladesh
+9.  England
