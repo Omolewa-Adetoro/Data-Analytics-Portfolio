@@ -34,9 +34,9 @@ My goal with this portfolio is to demonstrate my ability to turn raw data into a
 
  **Link To Project:** https://github.com/Omolewa-Adetoro/Data-Analytics-Portfolio/tree/main/Best%20Batting%20And%20Bowling%20Performance 
 
-   ## 3. Sales Insight
+   ## 3. Covid_19 Analysis
  **Description**
- This projects uses data to create a dashboard to provide sales insight in real time.
+ This projects looks at the affects covid has created.
 
   **Tools:**  
  
