@@ -30,12 +30,12 @@ I am an aspiring **Data Analyst** with a passion for turning raw data into actio
 * This project explored the differences between annual members and casual riders that use Cyclistic Bikes (a fictional company).
 * Tools: SQL, R, tidyverse, scales
 
-Link To Project: https://github.com/Omolewa-Adetoro/Data-Analytics-Portfolio/tree/main/Members%20and%20Casual%20Riders%20Differences
+Link To Project: https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Differences
 ### Best Batting And Bowling Performance
 * This project analyzed world cricket data to find which countries have the best batting and bowling performance.
 * Tools: SQL, R, tidyverse, scales
 
-Link To Project: https://github.com/Omolewa-Adetoro/Data-Analytics-Portfolio/tree/main/Best%20Batting%20And%20Bowling%20Performance
+Link To Project: https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Differences
 
 Check out my Portfolio for more details!
 
