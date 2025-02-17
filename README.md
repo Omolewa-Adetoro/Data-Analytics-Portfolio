@@ -1,60 +1,55 @@
-# **Hi there! I'm Omolewa Adetoro**
 
+# **Hello! I'm Omolewa Adetoro** 👋
 
+## **About Me** 🎯
+I am an aspiring **Data Analyst** passionate about transforming raw data into actionable insights. My expertise lies in uncovering trends, driving data-based decision-making, and visualizing findings to communicate data-driven stories effectively. 📊
 
-## **About Me**
-I am an aspiring **Data Analyst** with a passion for turning raw data into actionable insights. I enjoy working with data to uncover trends, make data-driven decisions, and visualize findings in an impactful way.
+## **Skills & Tools** 🛠️
 
-## **Skills & Tools**
-
-### **Spreadsheets (Excel)**
-* Data cleaning and transformation using Pivot Tables, Power Query, and formulas like VLOOKUP.
-* Performing statistical analysis and creating dashboards.
+### **Spreadsheets (Excel)** 📑
+- Data cleaning and transformation with Pivot Tables, Power Query, and advanced formulas (e.g., VLOOKUP).
+- Performing statistical analysis and building interactive dashboards.
 
 ![Excel Icon](https://img.icons8.com/?size=96&id=UECmBSgBOvPT&format=png)
 
-### **Databases (MySQL, PostgreSQL)**
-* Writing SQL queries to extract and manipulate data.
-* Performing data aggregation and joins for analysis.
+### **Databases (MySQL, PostgreSQL)** 💾
+- Writing and optimizing SQL queries for data extraction and manipulation.
+- Aggregating and joining datasets to derive meaningful insights.
 
-![MySQL Logo](https://img.icons8.com/?size=160&id=rgPSE6nAB766&format=png)
+<img src= "https://img.icons8.com/?size=96&id=rgPSE6nAB766&format=png" height = "60"/>
 
-### **Data Visualization (Tableau, Power BI)**
-* Creating interactive dashboards and reports.
-* Visualizing trends and insights through charts and graphs.
+### **Data Visualization (Tableau, Power BI)** 📊
+- Designing interactive dashboards and insightful reports.
+- Visualizing trends and key insights through impactful charts and graphs.
 
-![Power BI Logo](https://logos-world.net/wp-content/uploads/2022/02/Microsoft-Power-BI-Symbol.png)
-![Tableau Logo](https://icons8.com/icon/9Kvi1p1F0tUo/tableau-software)
+ 
+<a href="#" target="_blank"> <img src= "https://logos-world.net/wp-content/uploads/2022/02/Microsoft-Power-BI-Symbol.png"  height = "60"/> </a>
+<a href="#" target="_blank"> <img src= "https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Tableau_logo.svg/1920px-Tableau_logo.svg.png" height = "60"/> </a>
 
+### **Programming (Python)** 🐍
+- Proficient in **Pandas** for data manipulation and analysis.
 
-### **Programming (Python)**
-* Using Pandas for data manipulation.
+<img src= "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height = "60"/>
 
-![Python Logo](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)
+### **Programming (R)** 📉
+- Conducting statistical analysis and hypothesis testing.
+- Data manipulation and visualization using **Tidyverse**, **scales**, and **ggplot2**.
 
-### **Programming (R)**
-* Performing statistical analysis and hypothesis testing.
-* Data manipulation and visualization using Tidyverse, scales, and ggplot2.
+<img src= "https://img.icons8.com/?size=96&id=CLvQeiwFpit4&format=png" height = "60"/> </a>
 
-![R Logo](https://img.icons8.com/?size=96&id=CLvQeiwFpit4&format=png)
+## **Projects** 💼
+Here are some of my recent data analysis projects:
 
-## **Projects**
-**Here are some of my recent data projects:**
+### 1. [**Differences Between Members and Casual Riders**](https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Differences) 🚲
+- Analyzed the differences between annual members and casual riders of Cyclistic Bikes (a fictional company).
+- **Tools Used**: SQL, R, **Tidyverse**, **scales**.
 
-### Differences Between Members And Casual Riders
-* This project explored the differences between annual members and casual riders that use Cyclistic Bikes (a fictional company).
-* Tools: SQL, R, tidyverse, scales
+### 2. [**Best Batting and Bowling Performance**](https://github.com/Omolewa-Adetoro/Best-Batting-And-Bowling-Performance) 🏏
+- Analyzed cricket performance data to identify top-performing countries in batting and bowling.
+- **Tools Used**: SQL, R, **Tidyverse**, **scales**.
 
-[Link To Project: Members and Casual Riders Differences](https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Differences)
+## **Let's Connect** 🤝
+- [LinkedIn](https://www.linkedin.com/in/omolewa-adetoro-135b64252) 💼
+- Email: [Omolewa804@gmail.com](mailto:Omolewa804@gmail.com) 📧
 
-### Best Batting And Bowling Performance
-* This project analyzed world cricket data to find which countries have the best batting and bowling performance.
-* Tools: SQL, R, tidyverse, scales
-
-[Link To Project: Best Batting and Bowling Performance](https://github.com/Omolewa-Adetoro/Best-Batting-And-Bowling-Performance)
-
-## **Connect with Me**
-* [LinkedIn: www.linkedin.com/in/omolewa-adetoro-135b64252](www.linkedin.com/in/omolewa-adetoro-135b64252)
-* Email: [Omolewa804@gmail.com](mailto:Omolewa804@gmail.com)
-
-Let's connect and talk data!
+Feel free to reach out if you'd like to talk about data! 💬
