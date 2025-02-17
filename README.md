@@ -50,6 +50,6 @@ Here are some of my recent data analysis projects:
 
 ## **Let's Connect** 🤝
 - [LinkedIn](https://www.linkedin.com/in/omolewa-adetoro-135b64252) 💼
-- Email: [Omolewa804@gmail.com](mailto:Omolewa804@gmail.com) 📧
+
 
 Feel free to reach out if you'd like to talk about data! 💬
