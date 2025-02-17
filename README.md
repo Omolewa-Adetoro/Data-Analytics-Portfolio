@@ -42,7 +42,6 @@ Check out my Portfolio for more details!
 
 ## Connect with Me
 *	LinkedIn: www.linkedin.com/in/omolewa-adetoro-135b64252
-*	GitHub: Your GitHub
 *	Email: Omolewa804@gmail.com 
 
 Let's connect and talk data! 
