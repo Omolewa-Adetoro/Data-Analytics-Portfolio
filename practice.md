@@ -31,11 +31,12 @@ I am an aspiring **Data Analyst** with a passion for turning raw data into actio
 * Tools: SQL, R, tidyverse, scales
 
 Link To Project: https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Differences
+
 ### Best Batting And Bowling Performance
 * This project analyzed world cricket data to find which countries have the best batting and bowling performance.
 * Tools: SQL, R, tidyverse, scales
 
-Link To Project: https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Differences
+Link To Project: https://github.com/Omolewa-Adetoro/Best-Batting-And-Bowling-Performance
 
 Check out my Portfolio for more details!
 
