@@ -32,7 +32,7 @@ My goal with this portfolio is to demonstrate my ability to turn raw data into a
   **Tools:**  
  SQL, R, tidyverse,scales
 
- **Link To Project:** https://github.com/Omolewa-Adetoro/Data-Analytics-Portfolio/tree/main/Best%20Batting%20And%20Bowling%20Performance 
+ **Link To Project:** https://github.com/Omolewa-Adetoro/Best-Batting-And-Bowling-Performance 
 
 
 
