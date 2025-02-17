@@ -34,14 +34,7 @@ My goal with this portfolio is to demonstrate my ability to turn raw data into a
 
  **Link To Project:** https://github.com/Omolewa-Adetoro/Data-Analytics-Portfolio/tree/main/Best%20Batting%20And%20Bowling%20Performance 
 
-   ## 3. Covid_19 Analysis
- **Description**
- This projects looks at the affects covid has created.
 
-  **Tools:**  
- 
-
- **Link To Project:** 
 
 # Technologies & Tools
 Here are the technologies and tools I am proficient in, which are used throughout the projects:
