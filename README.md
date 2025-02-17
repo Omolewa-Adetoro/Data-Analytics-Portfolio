@@ -40,8 +40,8 @@ My goal with this portfolio is to demonstrate my ability to turn raw data into a
 Here are the technologies and tools I am proficient in, which are used throughout the projects:
 * Languages: Python, R,SQL
 * Data Manipulations: Pandas, Tidyverse, scales, SQL
-* Data Visualisation: ggplot2,Tableau
-* Other Tools: PGAdmin, RStudios, Juypter Notebook
+* Data Visualisation: ggplot2,Tableau, PowerBI
+* Other Tools: PGAdmin, MySQL, RStudios, Juypter Notebook, Google Colab
 
 # Contact
 Feel free to reach out if you have any questions or would like to connect!
