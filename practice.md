@@ -24,11 +24,15 @@ I am an aspiring **Data Analyst** with a passion for turning raw data into actio
 *	Performing statistical analysis and hypothesis testing.
 *	Data manipulation and visualization using Tidyverse, scales, and ggplot2.
 
-### **Projects**
-Here are some of my recent data projects:
-*	[Project 1 Name] - A brief description of the project and the tools used.
-*	[Project 2 Name] - A brief description of the project and the tools used.
-*	[Project 3 Name] - A brief description of the project and the tools used.
+## **Projects**
+**Here are some of my recent data projects:**
+### Differences Between Members And Casual Riders
+* This project explored the differences between annual members and casual riders that use Cyclistic Bikes (a fictional company).
+* Tools: SQL, R, tidyverse, scales
+
+### Best Batting And Bowling Performance
+* This project analyzed world cricket data to find which countries have the best batting and bowling performance.
+* Tools: SQL, R, tidyverse, scales
 
 Check out my Portfolio for more details!
 
