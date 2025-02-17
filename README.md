@@ -23,8 +23,8 @@ My goal with this portfolio is to demonstrate my ability to turn raw data into a
  **Tools:**  
  SQL, R, tidyverse,scales
 
- **Link To Project:**  https://github.com/Omolewa-Adetoro/Data-Analytics-Portfolio/tree/main/Members%20and%20Casual%20Riders%20Differences
-
+ **Link To Project:**  https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Differences
+ 
   ## 2. Best Batting And Bowling Performance
  **Description**
  This projects analysed world cricket data to find which countries has the best batting and bowling performance.
