@@ -1,49 +1,48 @@
-# Data Analysis Portfolio
-Welcome to my Data Analysis Portfolio! This repository showcases a collection of my data analysis projects, highlighting my skills in data cleaning, data wrangling, and data visualization. Each project is designed to address real-world problems, using a variety of tools and techniques to extract meaningful insights.
+# **Hi there!  I'm Omolewa Adetoro**
 
-# Table of Contents
-* About
-* Projects
-* Technologies & Tools
-* Contact
+##  **About Me**
+I am an aspiring **Data Analyst** with a passion for turning raw data into actionable insights. I enjoy working with data to uncover trends, make data-driven decisions, and visualize findings in an impactful way.
 
- # About
- This portfolio is a compilation of my work in the field of data analysis. Each project contains:
- * An explantion of the case study and it purpose
- * Data cleaning and processing steps
- * Visualisations to illustrate trends and key findings
- * A summary of conclusion and potential next steps
-My goal with this portfolio is to demonstrate my ability to turn raw data into actionable insights through a structures and thouughtful approach.
+ ## **Skills & Tools**
 
-# Projects
-## 1. Differences Between Members And Casual Riders
- **Description:**  
- This project explored the differences between annual members and casual riders that use a Cyclistic Bikes (a fictional company).  
+### **Spreadsheets (Excel)**
+*	Data cleaning and transformation using Pivot Tables, Power Query, and formulas like VLOOKUP.
+*	Performing statistical analysis and creating dashboards.
 
- **Tools:**  
- SQL, R, tidyverse,scales
+### **Databases (MySQL, PostgreSQL)**
+*	Writing SQL queries to extract and manipulate data.
+*	Performing data aggregation and joins for analysis.
 
- **Link To Project:**  https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Differences
- 
-  ## 2. Best Batting And Bowling Performance
- **Description**
- This projects analysed world cricket data to find which countries has the best batting and bowling performance.
+### **Data Visualization (Tableau, Power BI)**
+*	Creating interactive dashboards and reports.
+*	Visualizing trends and insights through charts and graphs.
 
-  **Tools:**  
- SQL, R, tidyverse,scales
+### **Programming (Python)**
+*	Using Pandas for data manipulation.
 
- **Link To Project:** https://github.com/Omolewa-Adetoro/Best-Batting-And-Bowling-Performance 
+### **Programming (R)**
+*	Performing statistical analysis and hypothesis testing.
+*	Data manipulation and visualization using Tidyverse, scales, and ggplot2.
 
+## **Projects**
+**Here are some of my recent data projects:**
+### Differences Between Members And Casual Riders
+* This project explored the differences between annual members and casual riders that use Cyclistic Bikes (a fictional company).
+* Tools: SQL, R, tidyverse, scales
 
+Link To Project: https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Differences
 
-# Technologies & Tools
-Here are the technologies and tools I am proficient in, which are used throughout the projects:
-* Languages: Python, R,SQL
-* Data Manipulations: Pandas, Tidyverse, scales, SQL
-* Data Visualisation: ggplot2,Tableau, PowerBI
-* Other Tools: PGAdmin, MySQL, RStudios, Juypter Notebook, Google Colab
+### Best Batting And Bowling Performance
+* This project analyzed world cricket data to find which countries have the best batting and bowling performance.
+* Tools: SQL, R, tidyverse, scales
 
-# Contact
-Feel free to reach out if you have any questions or would like to connect!
-* Email: Omolewa804@gmail.com
-* Linkedin: www.linkedin.com/in/omolewa-adetoro-135b64252
+Link To Project: https://github.com/Omolewa-Adetoro/Best-Batting-And-Bowling-Performance
+
+Check out my Portfolio for more details!
+
+## Connect with Me
+*	LinkedIn: www.linkedin.com/in/omolewa-adetoro-135b64252
+*	GitHub: Your GitHub
+*	Email: Omolewa804@gmail.com 
+
+Let's connect and talk data! 
