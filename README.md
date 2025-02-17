@@ -38,8 +38,6 @@ Link To Project: https://github.com/Omolewa-Adetoro/Members-And-Casual-Riders-Di
 
 Link To Project: https://github.com/Omolewa-Adetoro/Best-Batting-And-Bowling-Performance
 
-Check out my Portfolio for more details!
-
 ## Connect with Me
 *	LinkedIn: www.linkedin.com/in/omolewa-adetoro-135b64252
 *	Email: Omolewa804@gmail.com 
