@@ -50,7 +50,7 @@ Here are some of my recent data analysis projects:
 
 ## **Let's Connect** 🤝
 - [LinkedIn](https://www.linkedin.com/in/omolewa-adetoro-135b64252) 💼
-- [My Data Analysis Portfolio](https://sites.google.com/view/omolewa-adetoro-portfolio/project-page/powerbi) 💼
+- [My Data Analysis Portfolio](https://sites.google.com/view/omolewa-adetoro-portfolio/home) 💼
 
 
 Feel free to reach out if you'd like to talk about data! 💬
